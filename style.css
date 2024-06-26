@@ -216,7 +216,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    will-change: transform;
 }
 
 @keyframes moveUpDown {
@@ -357,6 +356,9 @@ body {
     }
     .title p{
        font-size: 11px;
+    }
+    .work-arrow{
+        bottom: 8px;
     }
     .work-arrow p {
         font-size: 12px;
