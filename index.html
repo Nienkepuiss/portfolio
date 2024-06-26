@@ -1,73 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Nienke - Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Anton&family=Lilita+One&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <title>Nienke - Portfolio</title>
+      <link rel="stylesheet" href="./style.css">
+  </head>
 
 <body>
   <header class="container-fluid">
-    <section id="header-container" class="d-flex justify-content-between align-items-center fixed-top">
-      <div class="logo-container">
-        <a href="#banner">
-          <img class="logo-nini" src="images/logo/nini.svg" alt="logo nini" />
-        </a>
-      </div>
-      <button id="menu-toggle">☰</button>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#about-services">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </section>
-  </header>
-  
-
-    <main class="container-fluid">
-
-      <section id="banner" class="row d-flex align-items-center">
-        <div class="col-lg-6 jellyfish-background">
-            <img class="img-banner" src="Images/jellyfish.svg" alt="pink jellyfish"/>
-            <img class="bubble1" src="Images/bubble.svg" alt="bubble"/>
-            <img class="bubble2" src="Images/bubble.svg" alt="bubble"/>
-            <img class="bubble3" src="Images/bubble.svg" alt="bubble"/>
-            <img class="bubble4" src="Images/bubble.svg" alt="bubble"/>
+      <section id="header-container" class="d-flex justify-content-between align-items-center fixed-top">
+        <div class="logo-container">
+           <a class="logo-nini" href="#banner">NINI</a>
         </div>
-        <div class="col-lg-6 title-container">
+        <button id="menu-toggle">☰</button>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#about-services">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </section>
+  </header>
+  <main class="container-fluid">
+      <section id="banner" class="row d-flex align-items-center">
+         <div class="col-lg-6 jellyfish-background">
+             <img class="img-banner" src="Images/jellyfish.svg" alt="pink jellyfish"/>
+             <img class="bubble1" src="Images/bubble.svg" alt="bubble"/>
+             <img class="bubble2" src="Images/bubble.svg" alt="bubble"/>
+             <img class="bubble3" src="Images/bubble.svg" alt="bubble"/>
+             <img class="bubble4" src="Images/bubble.svg" alt="bubble"/>
+         </div>
+         <div class="col-lg-6 title-container">
             <div class="title text-center text-lg-left">
                 <h1>Hi, I'm <span class="highlight">Nienke</span>,<br/>web developer</h1>
                 <p>Dedicated to transforming ideas into digital realities.</p>
             </div>
             <div class="work-arrow text-center">
-                <a href="#projects">
-                    <p>See work</p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </a>
+              <a href="#projects">
+                  <p>See work</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+              </a>
             </div>
-        </div>
-    </section>
-    
-
-           <img class="wave" src="Images/wave.svg">
-           <section id="about-services" class="d-flex align-items-center justify-content-center">
-           <div class="row about-services-container">
-            <!-- About Me Section -->
+         </div>
+      </section>
+      <section id="about-services" class="d-flex align-items-center justify-content-center">
+        <div class="row about-services-container">
             <div class="col-lg-6">
               <div class="about-me">
                 <div class="about-content">
@@ -90,8 +78,6 @@
                 </div>
               </div>
             </div>
-        
-            <!-- Services Section -->
             <div class="col-lg-6">
               <div class="services">
                 <div class="service-cards">
@@ -119,11 +105,8 @@
               </div>
             </div>
           </div>
-        </section>
-
-          <img class="wave2" src="Images/wave2.svg"/>
-
-          <section id="projects">
+     </section>
+    <section id="projects">
             <h2 class="text-center">MY PROJECTS</h2>
             <div class="projects-container d-flex align-items-center justify-content-center">
                 <button class="arrow btn btn-outline-secondary" id="left-arrow">&#9664;</button>
@@ -152,7 +135,7 @@
               </div>
              <button class="arrow btn btn-outline-secondary" id="right-arrow">&#9654;</button>
             </div>
-        </section>
+      </section>
 
         <aside id="modale1" aria-hidden="true" role="dialog" style="display: none;">
           <div class="modale-content">
@@ -199,7 +182,7 @@
           </div>
          </aside>
 
-         <section id="contact" class="contact d-flex align-items-center justify-content-center">
+      <section id="contact" class="contact d-flex align-items-center justify-content-center">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-5 mb-4 form-text">
@@ -212,7 +195,7 @@
                 </div>
               </div>
               <div class="col-lg-7">
-                <form class="formular" action="process_form.php" method="POST" id="form" name="sendmail">
+                <form class="formular" action="#contact" method="POST" id="form" name="sendmail">
                   <div class="row row-names">
                     <div class="form-group form-firstname col-md-6">
                       <label for="lastname">First name</label>
@@ -240,15 +223,12 @@
               </div>
             </div>
           </div>
-        </section>
-        
+      </section>     
 </main>  
 <footer class="container-fluid">
   <section id="footer-container" class="d-flex flex-column align-items-center justify-content-center">
     <div class="logo-footer ">
-      <a href="#banner">
-        <img class="logo-nini-footer" src="images/logo/logo.svg" alt="logo nini" />
-      </a>
+      <a class="logo-nini" href="#banner">NINI</a>
     </div>
     <div class="socials d-flex justify-content-center mb-3">
      <a href="https://github.com/Nienkepuiss" target="_blank"><img src="Images/socials/GitHub.svg" alt="github icon"></a>
