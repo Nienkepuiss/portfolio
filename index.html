@@ -35,7 +35,19 @@
   <main class="container-fluid">
       <section id="banner" class="row d-flex align-items-center">
          <div class="col-lg-6 jellyfish-background">
-             <img class="img-banner" src="Images/jellyfish.svg" alt="pink jellyfish"/>
+          <picture>
+            <source srcset="Images/jellyfish/jellyfish-576.png"
+                media="(max-width: 576px)">
+            <source srcset="Images/jellyfish/jellyfish-768.png"
+                media="(max-width: 768px)">
+            <source srcset="Images/jellyfish/jellyfish-992.png"
+                media="(max-width: 992px)">
+            <source srcset="Images/jellyfish/jellyfish-1200.png"
+                media="(max-width: 1024px)">
+            <source srcset="Images/jellyfish/jellyfish-1440.png"
+                media="(max-width: 1440px)">
+              <img src="Images/jellyfish/jellyfish.png" class="img-banner" alt="pink jellyfish">
+            </picture>
              <img class="bubble1" src="Images/bubble.svg" alt="bubble"/>
              <img class="bubble2" src="Images/bubble.svg" alt="bubble"/>
              <img class="bubble3" src="Images/bubble.svg" alt="bubble"/>
@@ -115,21 +127,21 @@
                         <img src="Images/projects/Booki.svg" class="project-img card-img-top" alt="booki project">
                         <div class="card-body">
                             <h3 class="project-card-title">Frontend of a travel agency website</h3>
-                            <button class="btn btn-primary" onclick="window.open('https://github.com/Nienkepuiss/projet2', '_blank')">View code <img src="Images/GitHub.png" class="ml-2"/></button>
+                            <button class="btn btn-primary" onclick="window.open('https://github.com/Nienkepuiss/projet2', '_blank')">View code <img src="Images/socials/GitHub.svg" class="ml-2"/></button>
                         </div>
                     </a>
                     <a class="project-card card m-2" id="slide2" href="#modale2">
                       <img src="Images/projects/Bluel.svg" class="project-img card-img-top" alt="bluel project">
                       <div class="card-body">
                           <h3 class="project-card-title">Dynamic website of an architect</h3>
-                          <button class="btn btn-primary" onclick="window.open('https://github.com/Nienkepuiss/projet3', '_blank')">View code <img src="Images/GitHub.png" class="ml-2"/></button>
+                          <button class="btn btn-primary" onclick="window.open('https://github.com/Nienkepuiss/projet3', '_blank')">View code <img src="Images/socials/GitHub.svg" class="ml-2"/></button>
                       </div>
                   </a>
                   <a class="project-card card m-2" id="slide3" href="#modale3">
                     <img src="Images/projects/Kasa.svg" class="project-img card-img-top" alt="kasa project">
                     <div class="card-body">
                         <h3 class="project-card-title">Housing rental web application</h3>
-                        <button class="btn btn-primary" onclick="window.open('https://github.com/Nienkepuiss/projet5', '_blank')">View code <img src="Images/GitHub.png" class="ml-2"/></button>
+                        <button class="btn btn-primary" onclick="window.open('https://github.com/Nienkepuiss/projet5', '_blank')">View code <img src="Images/socials/GitHub.svg" class="ml-2"/></button>
                     </div>
                 </a>
               </div>
