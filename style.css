@@ -1,5 +1,6 @@
 html {
     touch-action: manipulation;
+    height: 100%;
 }
 body {
     margin: 0;
@@ -97,7 +98,6 @@ body {
 /* BANNER */
 
 #banner {
-    height: 100vh;
     padding: 0 40px;
     background-color: #cedeeb;
     position: relative;
