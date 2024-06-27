@@ -1,32 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuItems = document.querySelectorAll('.nav-link');
+  const menuItems = document.querySelectorAll('.nav-link');
+  const menuToggle = document.getElementById('menu-toggle');
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', function () {
+      // Ferme le menu en cliquant sur le toggle
+      menuToggle.click();
+
+      // Gère les classes 'active' pour la navigation
+      menuItems.forEach(el => el.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Détecte la section visible pour ajouter la classe 'active' au lien correspondant
+  window.addEventListener('scroll', () => {
+    let currentSection = '';
     const sections = document.querySelectorAll('main > section');
 
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop <= window.innerHeight / 2 && sectionTop >= -section.offsetHeight / 2) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
     menuItems.forEach(item => {
-        item.addEventListener('click', function () {
-            menuItems.forEach(el => el.classList.remove('active'));
-            this.classList.add('active');
-        });
+      item.classList.remove('active');
+      if (item.getAttribute('href').substring(1) === currentSection) {
+        item.classList.add('active');
+      }
     });
-
-    window.addEventListener('scroll', () => {
-        let currentSection = '';
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            if (sectionTop <= window.innerHeight / 2 && sectionTop >= -section.offsetHeight / 2) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
-        menuItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href').substring(1) === currentSection) {
-                item.classList.add('active');
-            }
-        });
-    });
+  });
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const skillsSection = document.querySelector('.skills');
