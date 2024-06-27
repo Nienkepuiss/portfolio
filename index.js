@@ -1,22 +1,26 @@
 function setInitialBannerHeight() {
   const banner = document.getElementById('banner');
-  banner.style.height = `${window.innerHeight}px`;
+  const height = window.innerHeight;
 
-  // Supprimer les événements après l'initialisation pour éviter les ajustements de hauteur
-  window.removeEventListener('resize', setInitialBannerHeight);
-  window.removeEventListener('orientationchange', setInitialBannerHeight);
+  // Définir une hauteur fixe initiale pour la bannière
+  banner.style.height = `${height}px`;
 }
 
 // Ajuster la hauteur uniquement au chargement de la page
 window.addEventListener('load', setInitialBannerHeight);
 
-// Ajouter les événements pour la première fois
-window.addEventListener('resize', setInitialBannerHeight);
-window.addEventListener('orientationchange', setInitialBannerHeight);
+// Empêcher la hauteur de changer lors du redimensionnement de la fenêtre ou du changement d'orientation
+window.addEventListener('resize', () => {
+  const banner = document.getElementById('banner');
+  const currentHeight = parseInt(banner.style.height);
+  banner.style.height = `${currentHeight}px`;
+});
 
-
-
-
+window.addEventListener('orientationchange', () => {
+  const banner = document.getElementById('banner');
+  const currentHeight = parseInt(banner.style.height);
+  banner.style.height = `${currentHeight}px`;
+});
 
 
 

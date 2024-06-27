@@ -98,6 +98,7 @@ body {
 /* BANNER */
 
 #banner {
+    height: 100vh;
     padding: 0 40px;
     background-color: #cedeeb;
     position: relative;
