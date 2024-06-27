@@ -24,7 +24,7 @@ window.addEventListener('orientationchange', () => {
 
 
 
-
+// NAV EFFECTS
 document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelectorAll('.nav-link');
   const menuToggle = document.getElementById('menu-toggle');
@@ -61,6 +61,14 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// OPEN MENU
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.nav').classList.toggle('active');
+});
+
+
+// SKILLS EFFECT
 document.addEventListener('DOMContentLoaded', () => {
     const skillsSection = document.querySelector('.skills');
     const skillIcons = document.querySelectorAll('.skills img');
@@ -85,41 +93,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }, options);
 
     observer.observe(skillsSection);
-  });
-
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('.nav').classList.toggle('active');
 });
 
 
+
+
+// MOBILE DISPLAY PROJECTS
+
 document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.getElementById('carousel');
-  const leftArrow = document.getElementById('left-arrow');
-  const rightArrow = document.getElementById('right-arrow');
   const slides = document.querySelectorAll('.project-card');
   let currentSlide = 0;
   const totalSlides = slides.length;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   const showSlide = (index) => {
-      slides.forEach((slide, i) => {
-          slide.classList.remove('active');
-          if (i === index) {
-              slide.classList.add('active');
-          }
-      });
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
   };
 
   const nextSlide = () => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
   };
 
   const prevSlide = () => {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(currentSlide);
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
   };
 
+  // Swipe detection logic
+  carousel.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchend', (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    handleGesture();
+  });
+
+  const handleGesture = () => {
+    if (touchStartX - touchEndX > 50) {
+      // Swiped left
+      nextSlide();
+    } else if (touchEndX - touchStartX > 50) {
+      // Swiped right
+      prevSlide();
+    }
+    // Reset touch coordinates
+    touchStartX = 0;
+    touchEndX = 0;
+  };
+
+  // Buttons click events (optional, if you want to keep them)
+  const leftArrow = document.getElementById('left-arrow');
+  const rightArrow = document.getElementById('right-arrow');
   leftArrow.addEventListener('click', prevSlide);
   rightArrow.addEventListener('click', nextSlide);
 
@@ -127,29 +160,25 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(currentSlide);
 });
 
-
-// Fonction pour ouvrir une modale
+// OPEN MODALES 
 function openModale(modaleId) {
   document.getElementById(modaleId).style.display = 'flex';
   document.getElementById(modaleId).setAttribute('aria-hidden', 'false');
 }
 
-// Fonction pour fermer une modale
+// CLOSE MODALES
 function closeModale(modaleId) {
   document.getElementById(modaleId).style.display = 'none';
   document.getElementById(modaleId).setAttribute('aria-hidden', 'true');
 }
-
-// Ajouter des écouteurs d'événements aux cartes de projet
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', function (e) {
-      e.preventDefault();  // Empêche la navigation par défaut
-      const modaleId = this.getAttribute('href').substring(1); // Obtenir l'ID de la modale à partir du href
+      e.preventDefault();  
+      const modaleId = this.getAttribute('href').substring(1); 
       openModale(modaleId);
   });
 });
 
-// Ajouter des écouteurs d'événements aux boutons de fermeture
 document.querySelectorAll('.modale-content #close-modale').forEach(button => {
   button.addEventListener('click', function () {
       const modale = this.closest('aside');
