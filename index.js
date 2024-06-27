@@ -1,3 +1,23 @@
+function adjustBannerHeight() {
+  const banner = document.getElementById('banner');
+  banner.style.height = `${window.innerHeight}px`;
+}
+
+// Ajuster la hauteur au chargement de la page
+window.addEventListener('load', adjustBannerHeight);
+
+// Ajuster la hauteur lors du redimensionnement de la fenêtre
+window.addEventListener('resize', adjustBannerHeight);
+
+// Ajuster la hauteur lors du changement d'orientation de l'écran
+window.addEventListener('orientationchange', adjustBannerHeight);
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelectorAll('.nav-link');
   const menuToggle = document.getElementById('menu-toggle');

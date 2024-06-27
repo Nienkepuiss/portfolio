@@ -97,11 +97,11 @@ body {
 /* BANNER */
 
 #banner {
-    height: calc(var(--vh, 1vh) * 100 - 65px);
+    height: 100vh;
     padding: 0 40px;
     background-color: #cedeeb;
     position: relative;
-    margin-top: 65px;
+    overflow: hidden;
 }
 .jellyfish-background {
     max-width: 880px;
@@ -386,10 +386,6 @@ body {
      }
 }
 @media (max-width: 576px){
-    #banner{
-        min-height: auto;
-        justify-content: center;
-    }
     .title{
         margin-top: 30px;
     }
