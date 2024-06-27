@@ -100,6 +100,7 @@ body {
     height: 100vh;
     padding: 0 40px;
     background-color: #cedeeb;
+    position: relative;
 }
 .jellyfish-background {
     max-width: 880px;
@@ -385,8 +386,9 @@ body {
 }
 @media (max-width: 576px){
     #banner{
-        min-height: auto;
-        margin-top: 60px;
+        min-height: auto !important;
+        margin-top: 40px;
+        justify-content: center;
     }
     .title{
         margin-top: 30px;
@@ -399,6 +401,7 @@ body {
     }
     .work-arrow{
         bottom: 8px;
+        margin-top: auto;
     }
     .work-arrow p {
         font-size: 12px;
