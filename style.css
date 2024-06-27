@@ -14,7 +14,7 @@ body {
 
 /* HEADER */
 
-#header-container{
+.menu{
   width: 100%;
   padding: 0.7em 1.8em;
   background-color: #cedeeb;
@@ -97,10 +97,11 @@ body {
 /* BANNER */
 
 #banner {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100 - 65px);
     padding: 0 40px;
     background-color: #cedeeb;
     position: relative;
+    margin-top: 65px;
 }
 .jellyfish-background {
     max-width: 880px;
@@ -386,7 +387,7 @@ body {
 }
 @media (max-width: 576px){
     #banner{
-        height: calc(var(--vh) * 100);
+        min-height: auto;
         justify-content: center;
     }
     .title{
